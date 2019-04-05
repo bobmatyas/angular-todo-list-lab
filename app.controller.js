@@ -39,9 +39,6 @@ function TodoController($scope) {
 
 }
 
-// array of objects with name, relation, age [{}]   variable familyMembers
-
-
 angular
 .module("todoApp")
 .controller("TodoController", TodoController);
