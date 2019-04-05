@@ -31,9 +31,8 @@ function TodoController($scope) {
     // this function will remove a task from the to-do list based on clicking the "x" 
   }
 
-  function completeTask() {
-    // empty complete task function 
-    // this functin sets the tasks completed property to true
+  controller.completeTask = function(completed) {
+    controller.todoList[completed].completed = true;
   }
 
 

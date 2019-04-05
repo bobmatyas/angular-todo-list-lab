@@ -26,7 +26,8 @@
             
             <div class="to-do-list-item-inner">
               <div>
-                <button ng-if="todo.completed === false" id="completed" class="button-complete-task">Complete</button>
+                {{$index}}
+                <button ng-if="todo.completed === false" id="completed" class="button-complete-task" ng-click="$ctrl.completeTask($index)">Complete</button>
               </div>
               <div class="to-do-list-item-content">{{ todo.task }}</div>
               <div>
