@@ -31,7 +31,7 @@
               </div>
               <div class="to-do-list-item-content">{{ todo.task }}</div>
               <div>
-                <i class="material-icons" id="close-button">clear</i>
+                <i class="material-icons" id="close-button" ng-click="$ctrl.removeTask($index)">clear</i>
               </div>
             </div>
           </li>

@@ -26,12 +26,13 @@ function TodoController($scope) {
     controller.todoList.push(newTask);
   }
 
-  function removeTask() {
-    // empty remove task function
-    // this function will remove a task from the to-do list based on clicking the "x" 
+  controller.removeTask = function(removed) {    
+    // this function removes a task from the to-do list based on clicking the "x" 
+    controller.todoList.splice(removed, 1);
   }
 
   controller.completeTask = function(completed) {
+    // this function sets a task to completed based on the user clicking complete
     controller.todoList[completed].completed = true;
   }
 
