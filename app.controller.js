@@ -18,9 +18,12 @@ function TodoController($scope) {
     },
   ];
 
-  function addTask() {
-    // empty add task function
-    // this function will add a task to the to-do list based on the add task box
+  controller.addTask = function(task) {
+    // this function adds a task to the to-do list based on the add task box
+    let newTask = {};
+    newTask.task = task;
+    newTask.completed = false;
+    controller.todoList.push(newTask);
   }
 
   function removeTask() {

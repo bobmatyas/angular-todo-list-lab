@@ -37,8 +37,8 @@
         </ol>
 
         <!-- add a to-do list item -->
-        <form>
-          <input type="text" placeholder="Add your to do" class="input-box">
+        <form ng-submit="$ctrl.addTask($ctrl.task)">
+          <input ng-model="$ctrl.task" type="text" placeholder="Add your to do" class="input-box">
           <button type="submit" class="button-add-task">Add</button>
         </form>
       </div>
