@@ -21,9 +21,8 @@
           <li  ng-cloak class="to-do-list-item" ng-repeat="todo in $ctrl.todoList | filter:search" ng-class="{ 'completed' : todo.completed == true }">
             
             <div class="to-do-list-item-inner">
-              <div>
-                <button ng-if="todo.completed === false" id="completed" class="button-complete-task" ng-click="$ctrl.completeTask($index)">Complete</button>
-              </div>
+              <button ng-if="todo.completed === false" id="completed" class="button-complete-task" ng-click="$ctrl.completeTask($index)">Complete</button>
+              
               <div class="to-do-list-item-content">{{ todo.task }}</div>
               <div>
                 <i class="material-icons" id="close-button" ng-click="$ctrl.removeTask($index)">clear</i>
