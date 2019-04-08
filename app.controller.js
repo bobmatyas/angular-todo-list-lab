@@ -24,6 +24,7 @@ function TodoController($scope) {
     newTask.task = task;
     newTask.completed = false;
     controller.todoList.push(newTask);
+    $scope.addTaskValue = null;
   }
 
   controller.removeTask = function(removed) {    
