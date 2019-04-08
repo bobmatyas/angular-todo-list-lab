@@ -18,7 +18,7 @@
         <input type="text" placeholder="Filter your to-dos" ng-model="search" class="input-box" />
         
         <ol class="to-do-list-container">
-          <li  ng-cloak class="to-do-list-item" ng-repeat="todo in $ctrl.todoList | filter:search" ng-class="{ 'completed' : todo.completed == true }">
+          <li  ng-cloak class="to-do-list-item" ng-repeat="todo in $ctrl.todoList | filter:search" ng-class="{ 'completed' : todo.completed === true }">
             
             <div class="to-do-list-item-inner">
               <button ng-if="todo.completed === false" id="completed" class="button-complete-task" ng-click="$ctrl.completeTask($index)">Complete</button>
